@@ -72,7 +72,7 @@ function checkAnswer(currentLevel)
 {
   if(gamePattern[currentLevel]===userClickedPattern[currentLevel])
   {
-    if(gamePattern[currentLevel].length===userClickedPattern[currentLevel].length)
+    if(gamePattern.length===userClickedPattern.length)
     {
       setTimeout(function(){
         nextSequence();
@@ -86,8 +86,9 @@ function checkAnswer(currentLevel)
     setTimeout(function(){
         $("body").removeClass("game-over");
      }, 200);
+     startOver();
   }
-   startOver();
+  
 }
 
 //////////////////////////////////////////////////////////////////////////
